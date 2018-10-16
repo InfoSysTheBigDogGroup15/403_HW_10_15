@@ -8,7 +8,8 @@
     <li><a onclick="document.getElementById('results').innerHTML='@ViewBag.addB'">Add a large list to the dictionary</a></li>
     <li><a onclick="document.getElementById('results').innerHTML='@ViewBag.deleteDict'">Delete an item in the Dictionary</a></li>
     <li><a onclick="document.getElementById('results').innerHTML='@ViewBag.clearDict'">Clear the Dictionary</a></li>
-    <li><a onclick="document.getElementById('results').innerHTML='@ViewBag.addDict'">Find an item to the Dictionary</a><input type="text" name="EMP_NAME" value="<%: ViewData[' ee'].ToString()%>">testtest</li>
-
+    <li><a onclick="document.getElementById('results').innerHTML='@ViewBag.addDict'">Find an item to the Dictionary</a><input runat="server" name="value" type="number" value="Enter Number"</li>
+    @{ int myname = Request.("value");
+    }
 </ul>
 <div id="results"></div>
