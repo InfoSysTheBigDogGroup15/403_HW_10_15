@@ -51,7 +51,21 @@ namespace _403_HW_10_15.Controllers
 
         public ActionResult Delete()
         {
-            return View();
+            
+            {
+                if (MyStack.Count == 0)
+                {
+                    ViewBag.MyStack = "Stack is Empty";
+                    return View("Index");
+                }
+                else
+                {
+                    MyStack.Pop();
+                    ViewBag.MyStack = msg;
+                    return View("Index");
+                }
+            }
+            
         }
 
         public ActionResult Clear()
@@ -64,7 +78,15 @@ namespace _403_HW_10_15.Controllers
 
         public ActionResult Search()
         {
-            return View();
+            string stringToFind = "FIXME";
+            if (MyStack.Contains(stringToFind))
+            {
+                return View("Index");
+            }
+            else
+            {
+                return View("Index");
+            }
         }
 
         public ActionResult Menu()

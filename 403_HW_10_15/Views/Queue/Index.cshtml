@@ -13,24 +13,24 @@
     <div class="container">
         <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:18%">
             <h3 class="w3-bar-item">Option</h3>
-            <a href="@Url.Action("AddOne", "Stack")"
-               class="w3-bar-item w3-button">Add one item to Stack</a>
-            <a href="@Url.Action("AddHuge", "Stack")"
-               class="w3-bar-item w3-button">Add Huge List of Items to Stack</a>
-            <a href="@Url.Action("Display", "Stack")"
-               class="w3-bar-item w3-button">Display Stack</a>
-            <a href="@Url.Action("Delete", "Stack")"
-               class="w3-bar-item w3-button">Delete from Stack</a>
-            <a href="@Url.Action("Clear", "Stack")"
-               class="w3-bar-item w3-button">Clear Stack</a>
-            <a href="@Url.Action("Search", "Stack")"
-               class="w3-bar-item w3-button">Search Stack</a>
-            <a href="@Url.Action("Menu", "Stack")"
+            <a href="@Url.Action("addToQueue", "Queue")"
+               class="w3-bar-item w3-button">Add one item to Queue</a>
+            <a href="@Url.Action("addListToQueue", "Queue")"
+               class="w3-bar-item w3-button">Add Huge List of Items to Queue</a>
+            <a href="@Url.Action("displayQueue", "Queue")"
+               class="w3-bar-item w3-button">Display Queue</a>
+            <a href="@Url.Action("deleteItem", "Queue")"
+               class="w3-bar-item w3-button">Delete from Queue</a>
+            <a href="@Url.Action("clearQueue", "Queue")"
+               class="w3-bar-item w3-button">Clear Queue</a>
+            <a href="@Url.Action("searchQueue", "Queue")"
+               class="w3-bar-item w3-button">Search Queue</a>
+            <a href="@Url.Action("Menu", "Queue")"
                class="w3-bar-item w3-button">Return to Main Menu</a>
         </div>
         <div style="margin-left:18%">
             <div class="w3-container w3-blue-grey">
-                <h1>Stack</h1>
+                <h1>Queue</h1>
             </div>
             <div class="w3-body">
                 @foreach (var AddString in ViewBag.MyStack)
