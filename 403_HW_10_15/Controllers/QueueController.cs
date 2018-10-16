@@ -12,7 +12,7 @@ namespace _403_HWTwo.Controllers
         public ActionResult Index()
         {
             Contract.Ensures(Contract.Result<ActionResult>() != null);
-            Queue<string> theQueue = new Queue<string>;
+            Queue<string> theQueue = new Queue<string>();
             //add one item to queue
             void addToQueue(Queue<string> q)
             {
