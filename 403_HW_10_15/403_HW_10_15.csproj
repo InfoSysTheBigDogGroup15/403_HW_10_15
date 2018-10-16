@@ -118,6 +118,7 @@
     <Folder Include="Views\Dictionary\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Queue\" />
+    <Folder Include="Views\Stack\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
