@@ -9,34 +9,54 @@ namespace _403_HW_10_15.Controllers
     public class DictionaryController : Controller
     {
         // GET: Dictionary
+        static public Dictionary<int, string> DictList = new Dictionary<int, string>();
+
         public ActionResult Index()
         {
+            //ViewBag.addDict = add2Dicionary();
+            //ViewBag.addB = addBiglist();
+           //// ViewBag.deleteDict = DeleteDictionary();
+            //ViewBag.clearDict = ClearDictionary();
+            //.TheDict = 8;
+            ////ViewBag.Findadict = FindAdict();
+            // PLLEEEEASSEEEE SHOWO UPPPPPPPP
+            return View();
+        }
 
-            Dictionary<int, string> DictList = new Dictionary<int, string>();
-
-            string add2Dicionary()
+        public ActionResult Add2Dictionary()
             {
-                string Tstring = "added Key number " + DictList.Count;
+                string Tstring = "added Key number ";
                 DictList.Add(DictList.Count, Tstring);
-                return Tstring;
+            Tstring = "added Key number "+DictList.Count;
+            ViewBag.localButton = Tstring;
+                return View("Index");
             }
 
-            string addBiglist()
+          public ActionResult AddBiglist()
             {
                 int bigBumber = 1000;
                 string Bstring = bigBumber + "items were added added";
                 for (int i = 0; i <= bigBumber; i++)
                 {
-                    add2Dicionary();
+                    Add2Dictionary();
+                
                 };
-                return Bstring;
+            ViewBag.localButton = Bstring;
+                return View("Index");
             }
-            Dictionary<int, string> DisplayDict()
+            public ActionResult Display()
             {
-                return DictList;
+            string Bstring = 1000 + "Dictionary....";
+            for (int i = 0; i <= 1000; i++)
+            {
+                
+                Bstring += "Key: "+DictList[i] + " Value: "+DictList +" <br";
+            };
+            ViewBag.localButton = Bstring;
+            return View("Index");
             }
 
-            string DeleteDictionary()
+            public ActionResult DeleteDictionary()
             {
                 string Item1 = "An item was deleted, but which one?";
                 if (DictList.Count == 0)
@@ -47,32 +67,37 @@ namespace _403_HW_10_15.Controllers
                 {
                     DictList.Remove(1);
                 }
-
-                return Item1;
+            ViewBag.localButton = Item1;
+            return View("Index");
             }
 
-            string ClearDictionary()
+            public ActionResult Clear()
             {
                 string DictClear = "Your Dict is clear... sad you had some good items here ;(";
 
                 DictList.Clear();
-                return DictClear;
+            ViewBag.localButton = DictClear;
+            return View("Index");
 
             }
-            string FindAdict()
-            {
-                DictList[];
-                // string foundValue = DictList[Dict];
-                return assHole;
+            public ActionResult Search()
+            { string Hole;
+                if (DictList.Count >0)
+                {
+
+                    Hole = "You found a Dictionary!>>" + DictList[0];
+                }
+                else
+                {
+                    Hole = "you do not have any Dictionaries Count is.."+DictList.Count;
+                }
+            ViewBag.localButton = Hole;
+            return View("Index");
             }
-            ViewBag.addDict = add2Dicionary();
-            ViewBag.addB = addBiglist();
-            ViewBag.deleteDict = DeleteDictionary();
-            ViewBag.clearDict = ClearDictionary();
-            ViewBag.TheDict = 8;
-            ViewBag.Findadict = FindAdict(ViewBag.TheDict = 8);
-            // PLLEEEEASSEEEE SHOWO UPPPPPPPP
-            return View();
+        public ActionResult Menu()
+        {
+            return RedirectToAction("Index", "Home");
         }
+
     }
 }
