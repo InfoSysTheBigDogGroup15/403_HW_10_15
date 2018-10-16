@@ -25,7 +25,7 @@ namespace _403_HW_10_15.Controllers
 
         public ActionResult Add2Dictionary()
             {
-                string Tstring = "added Key number ";
+                string Tstring = "added Key number "+(DictList.Count+1);
                 DictList.Add(DictList.Count, Tstring);
             Tstring = "added Key number "+DictList.Count;
             ViewBag.localButton = Tstring;
@@ -47,11 +47,18 @@ namespace _403_HW_10_15.Controllers
             public ActionResult Display()
             {
             string Bstring = 1000 + "Dictionary....";
-            for (int i = 0; i <= 1000; i++)
+            if (DictList.Count > 0)
             {
-                
-                Bstring += "Key: "+DictList[i] + " Value: "+DictList +" <br";
-            };
+                foreach (var item in DictList)
+                {
+
+                    Bstring += "Key: " + item.Key + " Value: " + item.Value;
+                };
+            }
+            else
+            {
+                Bstring = "no DICTIONARY!!!";
+            }
             ViewBag.localButton = Bstring;
             return View("Index");
             }
