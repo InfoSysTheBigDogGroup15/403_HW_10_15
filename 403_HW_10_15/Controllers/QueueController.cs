@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace _403_HW_10_15.Controllers
 {
     public class QueueController : Controller
-    {
+   {
         // GET: Queue
         public ActionResult Index()
         {
