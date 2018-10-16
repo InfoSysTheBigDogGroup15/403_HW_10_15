@@ -13,5 +13,10 @@ namespace _403_HW_10_15.Controllers
         {
             return View();
         }
+
+        public ActionResult Exit()
+        {
+            return Redirect("https://www.byu.edu");
+        }
     }
 }

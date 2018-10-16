@@ -4,7 +4,7 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-namespace _403_HWTwo.Controllers
+namespace _403_HW_10_15.Controllers
 {
     public class QueueController : Controller
     {
