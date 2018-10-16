@@ -81,10 +81,12 @@ namespace _403_HW_10_15.Controllers
             string stringToFind = "FIXME";
             if (MyStack.Contains(stringToFind))
             {
+                ViewBag.MyStack = msg;
                 return View("Index");
             }
             else
             {
+                ViewBag.MyStack = msg;
                 return View("Index");
             }
         }
