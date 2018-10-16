@@ -94,6 +94,7 @@
     <Content Include="Graphics\queue.png" />
     <Content Include="Graphics\stack.png" />
     <Content Include="Web.config" />
+    <Content Include="Views\Queue\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -114,7 +115,6 @@
     <Content Include="Views\Stack\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
-    <Content Include="Views\Queue\View.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
