@@ -59,9 +59,9 @@ namespace _403_HW_10_15.Controllers
                 return DictClear;
 
             }
-            string FindAdict(int Dict)
+            string FindAdict()
             {
-                string assHole = "Hey ass hole you deleted dict number " + Dict;
+                DictList[]
                 // string foundValue = DictList[Dict];
                 return assHole;
             }

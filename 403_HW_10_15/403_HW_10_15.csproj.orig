@@ -111,10 +111,15 @@
     <None Include="packages.config" />
     <Content Include="Views\Dictionary\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Stack\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
+=======
+    <Content Include="Shared\_Layout.cshtml" />
+    <Content Include="Shared\_Layout2.cshtml" />
     <Content Include="Views\Queue\View.cshtml" />
+>>>>>>> e7fa79c966b15d51f2a8da49e51ac66e1fbb407b
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,8 +130,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+<<<<<<< HEAD
     <Folder Include="Views\Queue\" />
+=======
     <Folder Include="Views\Stack\" />
+>>>>>>> e7fa79c966b15d51f2a8da49e51ac66e1fbb407b
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -9,7 +9,7 @@ namespace _403_HW_10_15.Controllers
     public class StackController : Controller
     {
         static Stack<string> MyStack = new Stack<string>();
-
+        string msg = "Success";
         // GET: Stack
         public ActionResult Index()
         {
@@ -22,8 +22,8 @@ namespace _403_HW_10_15.Controllers
         {
             MyStack.Push("New Entry " + (MyStack.Count + 1));
 
-
-            return RedirectToRoute("Index");
+            ViewBag.MyStack = msg;
+            return View("Index");
         }
 
         public ActionResult AddHuge()
@@ -37,8 +37,8 @@ namespace _403_HW_10_15.Controllers
                 MyStack.Push("New Entry " + (MyStack.Count + 1));
                 i++;
             }
-
-            return RedirectToRoute("Index");
+            ViewBag.MyStack = msg;
+            return View("Index");
         }
 
         public ActionResult Display()
@@ -46,6 +46,7 @@ namespace _403_HW_10_15.Controllers
             ViewBag.Title = "Stack";
             ViewBag.MyStack = MyStack;
             return View("Index");
+
         }
 
         public ActionResult Delete()
