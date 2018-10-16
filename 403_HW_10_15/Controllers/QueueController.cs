@@ -11,9 +11,10 @@ namespace _403_HWTwo.Controllers
         // GET: Queue
         public ActionResult Index()
         {
+            //does this work?
             Contract.Ensures(Contract.Result<ActionResult>() != null);
             Queue<string> theQueue = new Queue<string>();
-            //add one item to queue
+            //add to queue
             void addToQueue(Queue<string> q)
             {
                 int size = q.Count() + 1;
