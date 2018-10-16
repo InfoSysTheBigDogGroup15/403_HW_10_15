@@ -71,7 +71,7 @@ namespace _403_HW_10_15.Controllers
             ViewBag.clearDict = ClearDictionary();
             ViewBag.TheDict = 8;
             ViewBag.Findadict = FindAdict(ViewBag.TheDict = 8);
-
+            // PLLEEEEASSEEEE SHOWO UPPPPPPPP
             return View();
         }
     }
