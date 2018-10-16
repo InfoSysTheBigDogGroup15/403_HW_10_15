@@ -8,7 +8,7 @@ namespace _403_HW_10_15.Controllers
 {
     public class StackController : Controller
     {
-        static Stack<string> MyStack = new Stack<string>();
+        static public Stack<string> MyStack = new Stack<string>();
         string msg = "Success";
         // GET: Stack
         public ActionResult Index()
