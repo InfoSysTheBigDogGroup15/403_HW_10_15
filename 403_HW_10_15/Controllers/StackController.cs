@@ -91,10 +91,7 @@ namespace _403_HW_10_15.Controllers
             }
         }
 
-        public ActionResult Menu()
-        {
-            return RedirectToAction("Index", "Home");
-        }
+       
     }
 }
 
