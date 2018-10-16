@@ -13,6 +13,7 @@ namespace _403_HW_10_15.Controllers
         // GET: Queue
         public ActionResult Index()
         {
+            ViewBag.Title = "Queue";
             ViewBag.theQueue = theQueue;
             return View("Index");
         }
@@ -23,9 +24,10 @@ namespace _403_HW_10_15.Controllers
             int size = theQueue.Count() + 1;
             string addToQ = "New Entry " + size.ToString();
             theQueue.Enqueue(addToQ);
+            ViewBag.theQueue = "Success";
             return View();
         }
-        //remove everything from the queue
+        //add a list of 2000 to the queue
         public ActionResult addListToQueue()
         {
             //remove everything from the queue
@@ -35,6 +37,7 @@ namespace _403_HW_10_15.Controllers
             {
                 addToQueue();
             }
+            ViewBag.theQueue = "HUGE!";
             return View();
         }
         //Display contents of queue
@@ -49,10 +52,10 @@ namespace _403_HW_10_15.Controllers
             {
                 foreach (string entry in theQueue)
                 {
-                    display = display + " " + entry;
+                    display = display + " \n" + entry + " \n";
                 }
             }
-            ViewBag.display = display;
+            ViewBag.theQueue = display;
             return View("Index");
         }
         //delete any item from the queue
