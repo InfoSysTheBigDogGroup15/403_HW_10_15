@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace _403_HW_10_15.Controllers
+namespace _403_HWTwo.Controllers
 {
     public class HomeController : Controller
     {
@@ -12,6 +12,11 @@ namespace _403_HW_10_15.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Exit()
+        {
+            return Redirect("https://www.byu.edu");
         }
     }
 }
