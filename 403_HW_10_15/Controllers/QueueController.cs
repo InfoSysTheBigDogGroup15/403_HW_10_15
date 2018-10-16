@@ -9,13 +9,13 @@ namespace _403_HW_10_15.Controllers
     public class QueueController : Controller
     {
         static Queue<string> theQueue = new Queue<string>();
-        string display = "";
+        string display = "Success";
         // GET: Queue
         public ActionResult Index()
         {
             ViewBag.Title = "Queue";
             ViewBag.theQueue = theQueue;
-            return View("Index");
+            return View();
         }
 
         //add to queue
@@ -24,9 +24,10 @@ namespace _403_HW_10_15.Controllers
             int size = theQueue.Count() + 1;
             string addToQ = "New Entry " + size.ToString();
             theQueue.Enqueue(addToQ);
-            ViewBag.theQueue = "Success";
-            return View();
+            ViewBag.theQueue = display;
+            return View("Index");
         }
+
         //add a list of 2000 to the queue
         public ActionResult addListToQueue()
         {
@@ -38,12 +39,13 @@ namespace _403_HW_10_15.Controllers
                 addToQueue();
             }
             ViewBag.theQueue = "HUGE!";
-            return View();
+            return View("Index");
         }
+
         //Display contents of queue
         public ActionResult displayQueue()
         {
-            //error
+            //error message
             if (!theQueue.Any())
             {
                 display = "ERROR: There is nothing in the Queue, please add something.";
@@ -70,13 +72,15 @@ namespace _403_HW_10_15.Controllers
                 theQueue.Dequeue();
                 display = "Last Item removed from queue.";
             }
-            return View();
+            ViewBag.theQueue = display;
+            return View("Index");
         }
         //Clear the Queue
         public ActionResult clearQueue()
         {
             theQueue.Clear();
-            return View();
+            ViewBag.theQueue = "Cleared";
+            return View("Index");
         }
         //search the Queue
         public ActionResult searchQueue()
@@ -95,6 +99,7 @@ namespace _403_HW_10_15.Controllers
             sw.Stop();
             TimeSpan ts = sw.Elapsed;
             ViewBag.StopWatch = ts;
+            ViewBag.theQueue = display;
             return View("Index");
         }
     }
